@@ -1,0 +1,132 @@
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+}
+
+.logo-slider::before,
+.logo-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-slider::before {
+  left: 0;
+  background: linear-gradient(to right, #F5F5F5, transparent);
+}
+
+.logo-slider::after {
+  right: 0;
+  background: linear-gradient(to left, #F5F5F5, transparent);
+}
+
+.logo-slide-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.logo-slide-track:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  flex: 0 0 auto;
+  padding: 0 20px;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 160px;
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(46, 125, 50, 0.15);
+}
+
+.partner-logo {
+  height: 60px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+  filter: grayscale(0%);
+}
+
+.partner-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1B5E20;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.partner-card:hover .partner-name {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-slider::before,
+  .logo-slider::after {
+    width: 40px;
+  }
+  
+  .slide {
+    padding: 0 10px;
+  }
+  
+  .partner-card {
+    padding: 15px 20px;
+    min-width: 120px;
+  }
+  
+  .partner-logo {
+    height: 40px;
+    max-width: 80px;
+  }
+  
+  .partner-name {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-card {
+    min-width: 100px;
+    padding: 12px 15px;
+  }
+  
+  .partner-logo {
+    height: 30px;
+    max-width: 60px;
+  }
+}

@@ -5,6 +5,7 @@ import Values from '../components/home/Values';
 import Events from '../components/home/Events';
 import Stats from '../components/home/Stats';
 import GalleryPreview from '../components/home/GalleryPreview';
+import Partners from '../components/home/Partrners';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <AboutPreview />
       <Stats />
       <Values />
+      <Partners /> 
       <Events />
       <GalleryPreview />
     </motion.div>

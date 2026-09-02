@@ -1,8 +1,18 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLeaf, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLeaf, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCode, FaWhatsapp, FaTiktok, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  // Social Media Links - REPLACE THESE WITH YOUR ACTUAL LINKS
+  const socialLinks = {
+    facebook: 'https://www.facebook.com/profile.php?id=61570999286319',
+    twitter: 'https://twitter.com/your-esatuk-handle',
+    instagram: 'https://www.instagram.com/esatuk_',
+    youtube: 'https://youtube.com/@your-esatuk-channel',
+    tiktok: 'https://tiktok.com/@your-esatuk-handle',
+    linkedin: 'https://linkedin.com/company/your-esatuk-page'
+  };
 
   return (
     <footer className="bg-primary-dark text-white pt-16 pb-6">
@@ -18,18 +28,61 @@ const Footer = () => {
               Environmental Students' Association of the Technical University of Kenya.
               Championing sustainability, climate action, and environmental stewardship.
             </p>
-            <div className="flex gap-4 mt-4">
-              <a href="#" className="text-gray-300 hover:text-primary-mint transition-colors">
+            <div className="flex flex-wrap gap-4 mt-4">
+              <a 
+                href={socialLinks.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-primary-mint transition-colors hover:scale-110 transform duration-200"
+                aria-label="Follow us on Facebook"
+              >
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary-mint transition-colors">
+              <a 
+                href={socialLinks.twitter} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-primary-mint transition-colors hover:scale-110 transform duration-200"
+                aria-label="Follow us on Twitter"
+              >
                 <FaTwitter size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary-mint transition-colors">
+              <a 
+                href={socialLinks.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-primary-mint transition-colors hover:scale-110 transform duration-200"
+                aria-label="Follow us on Instagram"
+              >
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary-mint transition-colors">
+              <a 
+                href={socialLinks.youtube} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-primary-mint transition-colors hover:scale-110 transform duration-200"
+                aria-label="Subscribe to our YouTube channel"
+              >
                 <FaYoutube size={20} />
+              </a>
+              {/* Optional: Add TikTok and LinkedIn */}
+              <a 
+                href={socialLinks.tiktok} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-primary-mint transition-colors hover:scale-110 transform duration-200"
+                aria-label="Follow us on TikTok"
+              >
+                <FaTiktok size={20} />
+              </a>
+              <a 
+                href={socialLinks.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-primary-mint transition-colors hover:scale-110 transform duration-200"
+                aria-label="Connect with us on LinkedIn"
+              >
+                <FaLinkedin size={20} />
               </a>
             </div>
           </div>
@@ -64,11 +117,30 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <FaPhone className="text-primary-mint flex-shrink-0" />
-                <span className="text-sm text-gray-300">+254 700 000 000</span>
+                <div className="text-sm text-gray-300">
+                  <div>+254 742 748 797</div>
+                  <div>+254 793 962 548</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaWhatsapp className="text-primary-mint flex-shrink-0" />
+                <a 
+                  href="https://wa.me/254742748797" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-300 hover:text-primary-mint transition-colors"
+                >
+                  +254 742 748 797
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-primary-mint flex-shrink-0" />
-                <span className="text-sm text-gray-300">esatuk@tukenya.ac.ke</span>
+                <a 
+                  href="mailto:esatukofficialw@gmail.com"
+                  className="text-sm text-gray-300 hover:text-primary-mint transition-colors"
+                >
+                  esatukofficialw@gmail.com
+                </a>
               </div>
             </div>
           </div>
@@ -97,9 +169,22 @@ const Footer = () => {
           <p className="text-sm text-gray-400">
             &copy; {currentYear} ESATUK. All rights reserved.
           </p>
-          <p className="text-sm text-gray-400">
-            Integrity to Nature 🌿
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-sm text-gray-400">
+            <span>Integrity to Nature 🌿</span>
+            <span className="hidden sm:inline">|</span>
+            <span className="flex items-center gap-1">
+              Built by 
+              <a 
+                href="https://github.com/Calvinweb-solution" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-mint hover:text-white transition-colors flex items-center gap-1 font-semibold"
+              >
+                <FaCode className="text-xs" />
+                Calvinweb Solutions
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </footer>
