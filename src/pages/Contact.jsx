@@ -7,14 +7,14 @@ const Contact = () => {
     {
       icon: <FaPhone className="text-2xl" />,
       title: 'Phone',
-      details: ['+254 700 000 000', '+254 711 111 111'],
+      details: ['+254 742 748 797', '+254 793 962 548'],
       link: 'tel:+254700000000'
     },
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: 'Email',
-      details: ['esatuk@tukenya.ac.ke', 'info@esatuk.org'],
-      link: 'mailto:esatuk@tukenya.ac.ke'
+      details: ['esatukofficialw@gmail.com', 'info@esatuk.org'],
+      link: 'mailto:esatukofficialw@gmail.com'
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
