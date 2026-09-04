@@ -7,11 +7,8 @@ const Footer = () => {
   // Social Media Links - REPLACE THESE WITH YOUR ACTUAL LINKS
   const socialLinks = {
     facebook: 'https://www.facebook.com/profile.php?id=61570999286319',
-    twitter: 'https://twitter.com/your-esatuk-handle',
     instagram: 'https://www.instagram.com/esatuk_',
-    youtube: 'https://youtube.com/@your-esatuk-channel',
-    tiktok: 'https://tiktok.com/@your-esatuk-handle',
-    linkedin: 'https://linkedin.com/company/your-esatuk-page'
+    linkedin: 'https://www.linkedin.com/company/e-satuk'
   };
 
   return (
