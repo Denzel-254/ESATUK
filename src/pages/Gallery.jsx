@@ -8,17 +8,17 @@ const Gallery = () => {
 
   const images = [
     { id: 1, src: '/three.jpeg', title: 'Tree Planting Drive', category: 'Activities' },
-    { id: 2, src: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', title: 'Environmental Workshop', category: 'Workshops' },
-    { id: 3, src: 'https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', title: 'Beach Cleanup', category: 'Activities' },
+    { id: 2, src: '/one.jpeg', title: 'Environmental Workshop', category: 'Workshops' },
+    { id: 3, src: '/treasurer.jpeg', title: 'Beach Cleanup', category: 'Activities' },
     { id: 4, src: '/logo.jpeg', title: 'Nature Conservation', category: 'Conservation' },
     { id: 5, src: '/two.jpeg', title: 'Community Engagement', category: 'Community' },
-    { id: 6, src: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', title: 'Environmental Education', category: 'Education' },
+    { id: 6, src: '/three.jpeg', title: 'Environmental Education', category: 'Education' },
     { id: 7, src: '/two.jpeg', title: 'Biodiversity Conservation', category: 'Conservation' },
-    { id: 8, src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', title: 'Forest Exploration', category: 'Activities' },
-    { id: 9, src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', title: 'Mountain Cleanup', category: 'Activities' },
+    { id: 8, src: '/vice.jpeg', title: 'Forest Exploration', category: 'Activities' },
+    { id: 9, src: '/treasurer.jpeg', title: 'Mountain Cleanup', category: 'Activities' },
     { id: 10, src: '/one.jpeg', title: 'Sustainable Living', category: 'Education' },
-    { id: 11, src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', title: 'Green Campus Initiative', category: 'Activities' },
-    { id: 12, src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', title: 'River Cleanup', category: 'Activities' },
+    { id: 11, src: '/two.jpeg', title: 'Green Campus Initiative', category: 'Activities' },
+    { id: 12, src: '/organizer.jpeg', title: 'River Cleanup', category: 'Activities' },
   ];
 
   const categories = ['All', ...new Set(images.map(img => img.category))];

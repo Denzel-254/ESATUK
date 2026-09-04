@@ -8,9 +8,9 @@ const Partners = () => {
   const partners = [
     {
       id: 1,
-      name: 'UNEP',
-      logo: 'https://placehold.co/200x80/2E7D32/FFFFFF?text=UNEP',
-      description: 'United Nations Environment Programme'
+      name: 'KUNEC',
+      logo: '/kunec.jpg',
+      description: 'Kenyatta University Environmental Club'
     },
     {
       id: 2,
