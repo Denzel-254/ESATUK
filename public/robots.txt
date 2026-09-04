@@ -1,0 +1,11 @@
+# Allow all robots to crawl the site
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://esatuk.org/sitemap.xml
+
+# Crawl delay for slower bots
+Crawl-delay: 10

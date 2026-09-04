@@ -175,7 +175,7 @@ const Footer = () => {
             <span className="flex items-center gap-1">
               Built by 
               <a 
-                href="https://github.com/Calvinweb-solution" 
+                href="http://calvinweb.co.ke" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary-mint hover:text-white transition-colors flex items-center gap-1 font-semibold"
