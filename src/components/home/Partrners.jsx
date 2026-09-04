@@ -8,58 +8,32 @@ const Partners = () => {
   const partners = [
     {
       id: 1,
-      name: 'KUNEC',
-      logo: '/kunec.jpg',
-      description: 'Kenyatta University Environmental Club'
+      name: 'KIUESA',
+      logo: '/kiuesa.jpg',
+      description: 'Kenya inter-University Environmental students Association'
     },
+    
     {
       id: 2,
-      name: 'WWF',
-      logo: 'https://placehold.co/200x80/2E7D32/FFFFFF?text=WWF',
-      description: 'World Wildlife Fund'
-    },
-    {
-      id: 3,
-      name: 'Greenpeace',
-      logo: 'https://placehold.co/200x80/2E7D32/FFFFFF?text=Greenpeace',
-      description: 'Environmental Organization'
-    },
-    {
-      id: 4,
       name: 'TUK',
-      logo: 'https://placehold.co/200x80/2E7D32/FFFFFF?text=TUK',
+      logo: '/tuk.png',
       description: 'Technical University of Kenya'
     },
     {
-      id: 5,
+      id: 3,
       name: 'CWS',
       logo: '/icon.png',
       description: 'Calvinweb Solutions'
     },
     {
-      id: 6,
-      name: 'NEMA',
-      logo: 'https://placehold.co/200x80/2E7D32/FFFFFF?text=NEMA',
-      description: 'National Environment Management Authority'
+      id: 4,
+      name: 'COLAP',
+      logo: '/colap.png',
+      description: 'Community Outreach, Linkages and Partnership'
     },
-    {
-      id: 7,
-      name: 'Sustainable Kenya',
-      logo: 'https://placehold.co/200x80/2E7D32/FFFFFF?text=Sustainable+Kenya',
-      description: 'Sustainable Development Initiative'
-    },
-    {
-      id: 8,
-      name: 'EcoTrust',
-      logo: 'https://placehold.co/200x80/2E7D32/FFFFFF?text=EcoTrust',
-      description: 'Environmental Trust Fund'
-    },
-    {
-      id: 9,
-      name: 'Green Belt Movement',
-      logo: 'https://placehold.co/200x80/2E7D32/FFFFFF?text=Green+Belt',
-      description: 'Environmental Conservation Movement'
-    },
+    
+    
+    
   ];
 
   // Triple the partners for seamless infinite scrolling
