@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SEO from '../components/common/SEO';
 import { useState } from 'react';
 import { FaTree, FaRecycle, FaWater, FaLeaf, FaHands, FaGlobe, FaArrowRight } from 'react-icons/fa';
 
@@ -82,6 +83,13 @@ const Projects = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO 
+        title="ESATUK Projects - Environmental Impact Initiatives"
+        description="Explore ESATUK's environmental projects including Green Campus Initiative, Tree Planting, Water Conservation, Recycling, and Community Engagement programs in Kenya."
+        keywords="ESATUK projects, environmental initiatives Kenya, sustainability projects, tree planting Kenya, recycling programs, community engagement"
+        url="https://esatuk.org/projects"
+      />
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary-dark to-primary">
         <div className="container-custom">

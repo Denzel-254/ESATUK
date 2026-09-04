@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { 
   FaLeaf, FaRecycle, FaHands, FaTree, FaUsers, 
@@ -25,6 +26,13 @@ const About = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO 
+        title="About ESATUK - Environmental Students' Association of TUK"
+        description="Learn about ESATUK's vision, mission, core values, and leadership team. Environmental Students' Association of Technical University of Kenya."
+        keywords="about ESATUK, environmental club TUK, sustainability Kenya, climate action students, ESATUK history"
+        url="https://esatuk.org/about"
+      />
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary-dark to-primary">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10" />

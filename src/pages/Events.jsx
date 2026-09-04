@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SEO from '../components/common/SEO';
 import { useState } from 'react';
 import { FaCalendar, FaMapMarkerAlt, FaClock, FaUsers, FaSearch } from 'react-icons/fa';
 
@@ -96,6 +97,13 @@ const Events = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO 
+        title="ESATUK Events - Environmental Activities & Initiatives"
+        description="Discover upcoming and past environmental events at ESATUK. Join tree planting drives, workshops, beach cleanups, and sustainability conferences at TUK."
+        keywords="ESATUK events, environmental activities Kenya, tree planting events, TUK workshops, beach cleanup, sustainability conference"
+        url="https://esatuk.org/events"
+      />
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary-dark to-primary">
         <div className="container-custom">

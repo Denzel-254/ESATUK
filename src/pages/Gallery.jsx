@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SEO from '../components/common/SEO';
 import { useState } from 'react';
 import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
@@ -52,6 +53,13 @@ const Gallery = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO 
+        title="Gallery - ESATUK Environmental Activities & Events"
+        description="Explore ESATUK's photo gallery showcasing environmental activities, tree planting, beach cleanups, workshops, and community engagement initiatives at TUK."
+        keywords="ESATUK gallery, environmental activities Kenya, TUK events, tree planting photos, beach cleanup, environmental workshops"
+        url="https://esatuk.org/gallery"
+      />
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary-dark to-primary">
         <div className="container-custom">

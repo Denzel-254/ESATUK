@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SEO from '../components/common/SEO';
 import { useState } from 'react';
 import { FaCheck, FaUsers, FaLeaf, FaHands, FaUserPlus } from 'react-icons/fa';
 import MembershipForm from '../components/forms/MembershipForm';
@@ -18,6 +19,13 @@ const Membership = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO 
+        title="Join ESATUK - Membership Registration & Benefits"
+        description="Join ESATUK, the Environmental Students' Association of TUK. Register online and become part of a community championing sustainability, climate action, and environmental stewardship."
+        keywords="ESATUK membership, join environmental club TUK, student sustainability Kenya, climate action students, register ESATUK"
+        url="https://esatuk.org/membership"
+      />
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary-dark to-primary">
         <div className="container-custom">
@@ -91,11 +99,11 @@ const Membership = () => {
             <div className="bg-white p-8 rounded-3xl shadow-lg">
               <ul className="space-y-4">
                 {[
-                  'Must be a registered student at the Technical University of Kenya',
+                  
                   'Passionate about environmental conservation and sustainability',
                   'Committed to the vision and mission of ESATUK',
                   'Willing to participate in association activities and projects',
-                  'Pay the membership fee (KES 500 per semester)'
+                  'Pay the membership fee (KES 100 )'
                 ].map((requirement, index) => (
                   <motion.li
                     key={index}

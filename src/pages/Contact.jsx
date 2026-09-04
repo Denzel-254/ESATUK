@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SEO from '../components/common/SEO';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp } from 'react-icons/fa';
 import ContactForm from '../components/forms/ContactForm';
 
@@ -8,7 +9,7 @@ const Contact = () => {
       icon: <FaPhone className="text-2xl" />,
       title: 'Phone',
       details: ['+254 742 748 797', '+254 793 962 548'],
-      link: 'tel:+254700000000'
+      link: 'tel:+254742748797'
     },
     {
       icon: <FaEnvelope className="text-2xl" />,
@@ -37,6 +38,13 @@ const Contact = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO 
+        title="Contact ESATUK - Get in Touch with Environmental Students' Association"
+        description="Contact ESATUK for inquiries, partnerships, or questions about environmental initiatives. Reach us via phone, email, WhatsApp, or visit our office at TUK."
+        keywords="contact ESATUK, environmental students TUK, ESATUK email, ESATUK phone, environmental association Kenya"
+        url="https://esatuk.org/contact"
+      />
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary-dark to-primary">
         <div className="container-custom">
@@ -99,7 +107,7 @@ const Contact = () => {
                 Quick Chat on WhatsApp:
               </span>
               <a
-                href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '254700000000'}`}
+                href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '254742748797'}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1DA851] transition-colors inline-flex items-center gap-2"
@@ -151,7 +159,7 @@ const Contact = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="ESATUK Location"
+              title="ESATUK Location - Technical University of Kenya"
               className="w-full"
             ></iframe>
           </motion.div>
