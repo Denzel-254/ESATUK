@@ -230,7 +230,7 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { name: 'Benrone Otieno', role: 'Chairperson', image: '/two.jpeg' },
-              { name: 'Sarah Wanjiru', role: 'Vice Chairperson', image: '/vice.jpeg' },
+              { name: 'Beatrice Akoth', role: 'Vice Chairperson', image: '/vice.jpeg' },
               { name: 'Johnson Agwanda', role: 'Secretary General', image: '/general.jpeg' },
               { name: 'Grace Simbine', role: 'Treasurer', image: '/treasurer.jpeg' },
             ].map((member, index) => (

@@ -1,14 +1,45 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLeaf, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCode, FaWhatsapp, FaTiktok, FaLinkedin } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLeaf, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCode, FaWhatsapp, FaTiktok, FaLinkedin, FaSpinner, FaCheck } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState('idle'); // idle | submitting | success | error
 
   // Social Media Links - REPLACE THESE WITH YOUR ACTUAL LINKS
   const socialLinks = {
     facebook: 'https://www.facebook.com/profile.php?id=61570999286319',
     instagram: 'https://www.instagram.com/esatuk_',
     linkedin: 'https://www.linkedin.com/company/e-satuk'
+  };
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    if (!newsletterEmail) return;
+    setNewsletterStatus('submitting');
+
+    try {
+      const templateParams = {
+        to_name: 'ESATUK Admin',
+        from_email: newsletterEmail,
+        subject: 'New Newsletter Subscription'
+      };
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_NEWSLETTER,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setNewsletterStatus('success');
+      setNewsletterEmail('');
+    } catch (err) {
+      setNewsletterStatus('error');
+      console.error('EmailJS newsletter error:', err);
+    }
   };
 
   return (
@@ -136,7 +167,7 @@ const Footer = () => {
                   href="mailto:esatukofficialw@gmail.com"
                   className="text-sm text-gray-300 hover:text-primary-mint transition-colors"
                 >
-                  esatukofficialw@gmail.com
+                  esatukofficial@gmail.com
                 </a>
               </div>
             </div>
@@ -148,15 +179,35 @@ const Footer = () => {
             <p className="text-sm text-gray-300 mb-3">
               Subscribe to our newsletter for environmental updates and events.
             </p>
-            <form className="flex flex-col gap-2">
+            <form className="flex flex-col gap-2" onSubmit={handleNewsletterSubmit}>
               <input
                 type="email"
                 placeholder="Your email"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                required
                 className="px-4 py-2 rounded-lg bg-white/10 text-white placeholder-gray-400 border border-white/20 focus:outline-none focus:border-primary-mint"
               />
-              <button className="btn-primary text-sm py-2 px-4">
-                Subscribe
+              <button type="submit" disabled={newsletterStatus === 'submitting'} className="btn-primary text-sm py-2 px-4 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                {newsletterStatus === 'submitting' ? (
+                  <>
+                    <FaSpinner className="animate-spin" />
+                    Subscribing...
+                  </>
+                ) : (
+                  'Subscribe'
+                )}
               </button>
+              {newsletterStatus === 'success' && (
+                <p className="text-xs text-primary-mint flex items-center gap-1">
+                  <FaCheck className="text-xs" /> Subscribed! Thank you.
+                </p>
+              )}
+              {newsletterStatus === 'error' && (
+                <p className="text-xs text-red-400">
+                  Failed to subscribe. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>
