@@ -1,16 +1,109 @@
-# React + Vite
+# 🌿 ESATUK - Environmental Students' Association of TUK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Integrity to Nature** 🌱
 
-Currently, two official plugins are available:
+A modern, responsive, and SEO-optimized website for the **Environmental Students' Association of the Technical University of Kenya (ESATUK)**. Built with React, Vite, and Tailwind CSS to champion sustainability, climate action, and environmental stewardship.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![ESATUK Banner](https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📖 Table of Contents
 
-## Expanding the ESLint configuration
+- [About ESATUK](#-about-esatuk)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Environment Variables](#-environment-variables)
+- [Project Structure](#-project-structure)
+- [Pages Overview](#-pages-overview)
+- [Available Scripts](#-available-scripts)
+- [Deployment](#-deployment)
+- [SEO Setup](#-seo-setup)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🌍 About ESATUK
+
+**ESATUK** is the official Environmental Students' Association of the Technical University of Kenya. We are a student-driven environmental platform committed to:
+
+- 🌱 **Sustainability** - Promoting eco-friendly practices
+- 🌍 **Climate Action** - Advocating for climate solutions
+- 💡 **Innovation** - Driving environmental innovation
+- 🤝 **Community Engagement** - Empowering local communities
+- 🌳 **Conservation** - Protecting natural resources
+
+### Our Vision
+> To be a leading student-driven environmental platform championing sustainability, climate action, innovation, and environmental stewardship within the Technical University of Kenya and beyond.
+
+### Our Mission
+> To inspire, educate, and empower students to protect the environment through research, advocacy, innovation, conservation, partnerships, and community engagement while promoting sustainable development.
+
+### Our Motto
+> **"Integrity to Nature"**
+
+---
+
+## ✨ Features
+
+### 🎨 Design & User Experience
+- ✅ **Fully Responsive** - Mobile-first design optimized for all screen sizes
+- ✅ **Modern UI** - Clean, professional, and eco-friendly green theme
+- ✅ **Smooth Animations** - Powered by Framer Motion for elegant transitions
+- ✅ **Interactive Elements** - Hover effects, carousels, and dynamic components
+- ✅ **Fast Loading** - Optimized with Vite for lightning-fast performance
+
+### 🔧 Functionality
+- ✅ **Online Membership Registration** - EmailJS integration for form submissions
+- ✅ **M-Pesa Payment Integration** - Pochi la Biashara instructions for KES 100 fee
+- ✅ **WhatsApp Quick Contact** - Floating button for instant communication
+- ✅ **Photo Gallery** - Categorized with lightbox viewing
+- ✅ **Events Management** - Upcoming and past events with search & filters
+- ✅ **Projects Showcase** - Detailed project information with impact metrics
+- ✅ **Partner Carousel** - Infinite scrolling partner logos
+- ✅ **Newsletter Subscription** - Footer newsletter signup
+
+### 🔍 SEO & Performance
+- ✅ **SEO Optimized** - Meta tags, Open Graph, Twitter Cards
+- ✅ **Structured Data** - Schema.org markup for search engines
+- ✅ **XML Sitemap** - For better indexing
+- ✅ **Robots.txt** - Proper crawler directives
+- ✅ **Fast Loading** - Optimized images and code splitting
+- ✅ **PWA Ready** - Web manifest for mobile app-like experience
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React 18** | UI Library |
+| **Vite** | Build Tool & Dev Server |
+| **Tailwind CSS** | Styling Framework |
+| **React Router DOM** | Client-side Routing |
+| **Framer Motion** | Animations & Transitions |
+| **React Icons** | Icon Library |
+| **EmailJS** | Form Submission to Email |
+| **React Helmet Async** | SEO Meta Tags Management |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
+- **npm** or **yarn** - Comes with Node.js
+- **Git** - [Download](https://git-scm.com/)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Denzel-254/ESATUK.git
+   cd ESATUK
