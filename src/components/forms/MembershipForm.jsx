@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
-import { FaCheck, FaSpinner } from 'react-icons/fa';
+import { FaCheck, FaSpinner, FaMoneyBillWave, FaInfoCircle } from 'react-icons/fa';
 
 const MembershipForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +11,7 @@ const MembershipForm = () => {
     regNumber: '',
     course: '',
     yearOfStudy: '',
+    mpesaCode: '', // ✅ NEW: M-Pesa transaction code
     reason: '',
     interests: []
   });
@@ -50,7 +51,6 @@ const MembershipForm = () => {
     setError('');
 
     try {
-      // EmailJS configuration - Replace with your actual credentials
       const templateParams = {
         to_name: 'ESATUK Admin',
         from_name: formData.fullName,
@@ -59,6 +59,7 @@ const MembershipForm = () => {
         reg_number: formData.regNumber,
         course: formData.course,
         year: formData.yearOfStudy,
+        mpesa_code: formData.mpesaCode, // ✅ Send M-Pesa code to email
         reason: formData.reason,
         interests: formData.interests.join(', '),
         subject: 'New Membership Registration'
@@ -66,7 +67,7 @@ const MembershipForm = () => {
 
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_MEMBERSHIP,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
@@ -79,6 +80,7 @@ const MembershipForm = () => {
         regNumber: '',
         course: '',
         yearOfStudy: '',
+        mpesaCode: '',
         reason: '',
         interests: []
       });
@@ -103,12 +105,18 @@ const MembershipForm = () => {
         <h3 className="text-2xl font-bold text-primary-dark mb-2">
           Registration Successful!
         </h3>
-        <p className="text-gray-600">
-          Thank you for joining ESATUK. You will receive a confirmation email shortly.
+        <p className="text-gray-600 mb-4">
+          Thank you for joining ESATUK. Your membership will be activated once 
+          your payment is confirmed. You will receive a confirmation email shortly.
         </p>
+        <div className="bg-primary-pale p-4 rounded-xl mb-4">
+          <p className="text-sm text-primary-dark">
+            💡 <strong>Tip:</strong> Keep your M-Pesa confirmation message safe for reference.
+          </p>
+        </div>
         <button
           onClick={() => setIsSuccess(false)}
-          className="btn-primary mt-6"
+          className="btn-primary mt-2"
         >
           Register Another Member
         </button>
@@ -217,6 +225,41 @@ const MembershipForm = () => {
             <option value="4">Year 4</option>
             <option value="5+">Year 5+</option>
           </select>
+        </div>
+      </div>
+
+      {/* ✅ NEW: M-Pesa Code Field - Full Width */}
+      <div className="mt-6 p-5 bg-gradient-to-br from-primary-pale to-green-50 rounded-2xl border-2 border-primary/20">
+        <div className="flex items-center gap-2 mb-3">
+          <FaMoneyBillWave className="text-primary text-xl" />
+          <label className="block text-sm font-bold text-primary-dark">
+            M-Pesa Transaction Code *
+          </label>
+        </div>
+        
+        <div className="relative">
+          <input
+            type="text"
+            name="mpesaCode"
+            value={formData.mpesaCode}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-3 rounded-xl border-2 border-primary/30 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all uppercase font-mono font-bold text-lg tracking-wider text-primary-dark bg-white"
+            placeholder="e.g., QGH7X8Y9Z1"
+            maxLength={10}
+            pattern="[A-Z0-9]{10}"
+            title="Enter the 10-character M-Pesa confirmation code"
+          />
+        </div>
+        
+        <div className="flex items-start gap-2 mt-3">
+          <FaInfoCircle className="text-primary flex-shrink-0 mt-1 text-sm" />
+          <p className="text-xs text-gray-700 leading-relaxed">
+            Enter the <strong>M-Pesa confirmation code</strong> you received after paying 
+            <strong className="text-primary"> KES 100</strong> to 
+            <strong className="text-primary"> 0743120050</strong> (Graca Asiko - Pochi la Biashara).
+            The code is 10 characters long (e.g., QGH7X8Y9Z1).
+          </p>
         </div>
       </div>
 
